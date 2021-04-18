@@ -920,8 +920,8 @@ input[type="radio"] + label:before {
 }
 
 img.test {
-  width: 100%;
-  height: auto;
+  object-fit: scale-down;
+  max-width: 100%;
 }
 
 .image.main img {
