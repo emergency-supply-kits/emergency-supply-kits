@@ -53,6 +53,8 @@
 
 		}
 
+	
+
 	// Nav.
 		var $nav = $header.children('nav'),
 			$nav_li = $nav.find('li');
@@ -305,6 +307,7 @@
 
 			});
 
+		
 		// Events.
 			$body.on('click', function(event) {
 
