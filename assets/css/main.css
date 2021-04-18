@@ -916,8 +916,8 @@ input[type="radio"] + label:before {
 .logo.img img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16/9;
 }
+
 .image.main {
   display: block;
   margin: 2.5rem 0;
