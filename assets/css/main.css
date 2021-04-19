@@ -112,6 +112,11 @@ section {
 
 body {
   line-height: 1;
+
+  background-image: url("hurricanPic.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 ol,
@@ -677,18 +682,16 @@ textarea {
   padding: 0.75rem 1rem;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  display: block;
-  float: left;
-  margin-right: -2rem;
-  opacity: 0;
-  width: 1rem;
-  z-index: -1;
+input[type="radio"],
+input[type="number"],
+input[type="submit"] {
+  background-color: #8842d5;
+  border: none;
+  color: white;
+  padding: 18px 36px;
+  text-decoration: none;
+  margin: 5px 4px;
+  cursor: pointer;
 }
 
 input[type="checkbox"] + label,
@@ -1364,7 +1367,7 @@ button {
       rgba(19, 21, 25, 0.5),
       rgba(19, 21, 25, 0.5)
     ),
-    url("../../images/overlay.png");
+    url("hurricanePic.JPG");
   background-size: auto, 256px 256px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -1383,7 +1386,7 @@ button {
   -ms-transition: -ms-transform 0.325s ease-in-out,
     -ms-filter 0.325s ease-in-out;
   transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-  background-image: url("../../images/bg.jpg");
+  background-image: url("hurricanePic.JPG");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
