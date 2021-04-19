@@ -112,11 +112,6 @@ section {
 
 body {
   line-height: 1;
-
-  background-image: url("hurricanPic.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 ol,
