@@ -38,6 +38,7 @@
 								<li><a href="#work">Mission</a></li>
 								<li><a href="#about">Learn</a></li>
 								<li><a href="#contact">Donate</a></li>
+								<li><a href="#reviews">Reviews</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -268,6 +269,44 @@
 								}
 								initPayPalButton();
 								  </script>
+							</article>
+
+							<!-- About -->
+							<article id="reviews">
+								<div class = "content home">
+								<h2 class="major">Reviews</h2>
+								<script type="text/JavaScript">
+									function showMessage(){
+										var message = document.getElementById("message").value;
+										display_message.innerHTML= message;
+									}
+								</script>
+								<body>
+									Enter message: <input type="text" id = "message">
+									<input type="submit" onclick="showMessage()" value="submit" />
+									<p> Message is: <span id = "display_message"></span> </p>
+									</body>
+									<form action="http://formspree.io/dsouza.sheryl123@gmail.com" method="post">
+										<div class="fields">
+											<div class="field half">
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" />
+											</div>
+											<div class="field half">
+												<label for="email">Email</label>
+												<input type="text" name="email" id="email" />
+											</div>
+											<div class="field">
+												<label for="message">Message</label>
+												<textarea name="message" id="message" rows="4"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+<!-- Simple HTML Form that “Triggers” an Email.-->
 							</article>
 
 						<!-- Elements -->
