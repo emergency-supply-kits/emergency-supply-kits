@@ -36,11 +36,11 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">About</a></li>
-								<li><a href="#work">Mission</a></li>
-								<li><a href="#about">Learn</a></li>
-								<li><a href="#contact">Donate</a></li>
-								<li><a href="#reviews">Testimonials</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#mission">Mission</a></li>
+								<li><a href="#learn">Learn</a></li>
+								<li><a href="#donate">Donate</a></li>
+								<li><a href="#testimonials">Testimonials</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -50,7 +50,7 @@
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="intro">
+							<article id="about">
 								<h2 class="major">About Us</h2>
 								<span class="image main"><img src="aboutMe.jpg" alt="" /></span>
 								<p>Our names are Eesha Agrahar and Roschelle D’souza and we are freshmen at Tompkins High School in Katy, Texas. We are part of a club called Future Business Leaders of America (FBLA), and as a part of this club, are participating in the Community Service Project. We are state winners and are now going to be proudly representing Texas at nationals.</p>
@@ -61,7 +61,7 @@
 							</article>
 
 						<!-- Work -->
-							<article id="work">
+							<article id="mission">
 								<h2 class="major">Our Mission</h2>
 								<span class="image main"><img src="missionUpdate.jpg" alt="mission update" /></span>
 								<p>Our mission is to make and distribute emergency supply kits to low-income families in the Fort Bend County area. Since we live in a hurricane-prone region, we prepare for hurricane season every year, and we have been aware of the threat of natural disasters throughout our lives. We also know that our families are blessed to have access to resources that have helped us overcome hardships caused by natural disasters. However, there are many families in our county without the same basic resources that we have access to. By preparing and distributing emergency supply kits, our hope is that we would be able to help these families survive when disaster strikes again.
@@ -93,7 +93,7 @@
 							</article>
 
 						<!-- About -->
-							<article id="about">
+							<article id="learn">
 								<h2 class="major">Learn </h2>
 								<span class="image main"><img src="learn.JPG" alt="" /></span>
 							    <p>It’s important to raise awareness on how to be responsible and ready for disaster. The most common natural disasters in Texas include wildfires, floods, hurricanes, severe storms, tornadoes, extreme heat, landslides, and power outages. 
@@ -165,7 +165,7 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
+							<article id="donate">
 								<h2 class="major">Donate</h2>
 								<p>We appriciate your contribution to help build emergency supply kits catered to low-income families.</p>
 								<div id="smart-button-container">
@@ -274,7 +274,7 @@
 							</article>
 
 							<!-- About -->
-							<article id="reviews">
+							<article id="testimonials">
 								<h2 class="major">Testimonials</h2>
 								<a href="#reviewSubmit">Leave a Testimonial</a>
 									
@@ -285,7 +285,8 @@
 							<article id="reviewSubmit"> 
 								<h2 class="major">Leave a Testimonial</h2>
 								<p>Thank you for taking the time out to write a testimonial. Your response will be sent for approval and posted within 1 - 2 business days.</p>
-								<form action ="https://formspree.io/f/myylzpvk" method="post">
+								<form action ="https://formspree.io/f/myylzpvk" method="post" onsubmit="reset()" >
+									<input type="hidden" name="_next" value="https://emergency-supply-kits.github.io/#" />
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -300,8 +301,14 @@
 										<li><input type="submit" value="Submit" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
+									
 								</form>
+								
+
 								<script>
+									function reset() {
+										document.getElementById("myForm").reset();
+									}
 									function unhide() {
 										alert("your form has been successfully submitted");
 								}
@@ -310,6 +317,10 @@
 							</script>
 								
 								
+							</article>
+
+							<article id="thankYou">
+								<p>Thank you for contributing</p>
 							</article>
 								
 					
