@@ -168,109 +168,11 @@
 							<article id="donate">
 								<h2 class="major">Donate</h2>
 								<p>We appreciate your contribution to help build emergency supply kits catered to low-income families.</p>
-								<div id="smart-button-container">
-									<div style="text-align: center;">
-									  <div style="margin-bottom: 1.25rem;">
-										
-										<select id="item-options"><option value="0" price="0">Select Amount<option value="15" price="15">15 USD</option><option value="25" price="25">25 USD</option><option value="50" price="50">50 USD</option><option value="100" price="100">100 USD</option><option value="200" price="200">200 USD</option></select>
-										<select style="visibility: hidden" id="quantitySelect"></select>
-										<p>OR</p>
-										 <input type="text" id="typeIn" placeholder="Type in Amount"/><br>
-									  </div>
-									<div id="paypal-button-container"></div>
-									</div>
-								  </div>
-								  <script src="https://www.paypal.com/sdk/js?client-id=AdW6k1BmBaPbgO8hVewAWXvlDjJmCdoNIQpu7X_tR4qtDekHHslYxMf-6Fl_efH_MD1NByJVI9udlWXD" data-sdk-integration-source="button-factory"></script>
-								  <!--AfRdw6M98i7I0RE0m39HYOxrdS7XEX3Fe_oGRrGbdMnibA_hw4W4Jjs7IWrNBB9Pk6SRnM3qCNnDhLKZ-->
-								  <script>
-									function initPayPalButton() {
-									  var shipping = 0;
-									  var itemOptions = document.querySelector("#smart-button-container #item-options");
-								  var quantity = parseInt();
-								  quantity = quantity + document.querySelector('#smart-button-container #amount');
-								  if (!isNaN(quantity)) {
-									quantitySelect.style.visibility = "visible";
-								  }
-								  var orderDescription = 'hi';
-								  if(orderDescription === '') {
-									orderDescription = 'Item';
-								  }
-								  paypal.Buttons({
-									style: {
-									  shape: 'rect',
-									  color: 'gold',
-									  layout: 'vertical',
-									  label: 'paypal',
-									  
-									},
-									createOrder: function(data, actions) {
-									  var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
-									  var typedAmount = document.getElementById("typeIn").value;
-									  if (typedAmount == "") {
-										  typedAmount = 0;
-									  }
-									  var selectedAmount = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
-									  if (selectedAmount == 0 && typedAmount == 0) {
-										alert("Please select an amount or enter an amount of your choice.");
-									  }
-									  var selectedItemPrice = parseFloat(typedAmount) + parseFloat(selectedAmount); 
-									  var tax = (0 === 0) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
-									  if(quantitySelect.options.length > 0) {
-										quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
-									  } else {
-										quantity = 1;
-									  }
-							  
-									  tax *= quantity;
-									  tax = Math.round(tax * 100) / 100;
-									  var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
-									  priceTotal = Math.round(priceTotal * 100) / 100;
-									  var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
-							  
-									  return actions.order.create({
-										purchase_units: [{
-										  description: orderDescription,
-										  amount: {
-											currency_code: 'USD',
-											value: priceTotal,
-											breakdown: {
-											  item_total: {
-												currency_code: 'USD',
-												value: itemTotalValue,
-											  },
-											  shipping: {
-												currency_code: 'USD',
-												value: shipping,
-											  },
-											  tax_total: {
-												currency_code: 'USD',
-												value: tax,
-											  }
-											}
-										  },
-										  items: [{
-											name: selectedItemDescription,
-											unit_amount: {
-											  currency_code: 'USD',
-											  value: selectedItemPrice,
-											},
-											quantity: quantity
-										  }]
-										}]
-									  });
-									},
-									onApprove: function(data, actions) {
-									  return actions.order.capture().then(function(details) {
-										alert('Transaction completed by' + details.payer.name.given_name + '!' + 'You will be emailed your receipt.');
-									  });
-									},
-									onError: function(err) {
-									  console.log(err);
-									},
-								  }).render('#paypal-button-container');
-								}
-								initPayPalButton();
-								  </script>
+								<form action="https://www.paypal.com/donate" method="post" target="_top">
+									<input type="hidden" name="hosted_button_id" value="GSTSJ6VZ3YFJU" />
+									<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+									<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+									</form>
 							</article>
 
 							<!-- About -->
@@ -281,8 +183,10 @@
 								<p>"Well done, Eesha and Roschelle, for embarking on this noble initiative at a young age to help those in need in times of emergency. Happy to help!" - Allen D'souza</p>
 								<p>"This is very impressive, Esha. Keep up with your diligent and earnest efforts in giving back to the community!" - Abha Harish</p>
 								<p>"Great Initiative! Keep up the good work. All the best to you girls!" - Amrita & Anil</p>
-								<p> "Keep up the good work, and all the best girls" - Farzana Sulemanji</p>
+								<p>"Congratulations, Eesha and Rochelle on winning the Texas competition. Great project for the Nationals. All the best. Keep up the good work." - Dinesh Pejaver</p>
+								<p>"Keep up the good work, and all the best girls" - Farzana Sulemanji</p>
 								<p>"Girls you are doing such a fabulous job!! Great initiative!! All the best for completing your mission! Keep going" - Geetha & Shiva</p>
+								<p>"Girls you are doing such a fabulous job!! All the best and Keep going, so proud of you!!" - Hemu Basu</p>
 								<p>"Great initiative, girls! Keep up the good work!" - Manju</p>
 								<p>"Great Cause! Good luck and i wish you the very best" - Rahul</p>
 								<p>"This is a great cause that you all started! Congratulations!" - Sunny Chunchu</p>
